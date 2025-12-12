@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>SEE ME</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      font-family: sans-serif;
+    }
+    #video {
+      display: none;
+      width: 100%;
+      max-width: 600px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 22px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="playVideo()">SEE ME</button>
+
+  <video id="video" src="video.mp4"></video>
+
+  <script>
+    function playVideo() {
+      document.querySelector("button").style.display = "none";
+      let v = document.getElementById("video");
+      v.style.display = "block";
+      v.play();
+    }
+  </script>
+
+</body>
+</html>
